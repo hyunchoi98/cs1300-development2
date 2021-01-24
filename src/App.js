@@ -100,7 +100,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ margin: "2% 5% 2% 5%" }}>
         <h1 style={{ margin: 10 }}>Credit Card Finder</h1>
         <h2 style={{ margin: 10 }}>Find the best credit card for you!</h2>
         <div id="filters">
