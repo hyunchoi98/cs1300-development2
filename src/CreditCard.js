@@ -15,7 +15,6 @@ class CreditCard extends Component {
 
   render() {
     let creditcard = this.props.card;
-    // const classes = useStyles();
 
     return (
       <Card style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: 200, margin: 5 }}>
