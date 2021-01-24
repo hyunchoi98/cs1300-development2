@@ -114,20 +114,23 @@ class App extends Component {
         <div style={{
           display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: 5,
         }}>
-          <FilteredList
-            style={{ width: "75%" }}
-            filter={this.state.filter}
-            sortType={this.state.sortType}
-            addToCart={this.addToCart}
-            removeFromCart={this.removeFromCart}
-          />
-
-          <Cart
-            style={{ width: "25%" }}
-            cart={this.state.cart}
-            totalFee={this.state.totalFee}
-            removeFromCart={this.removeFromCart}
-          />
+          <Grid container spacing={1}>
+            <Grid item xs={9}>
+              <FilteredList
+                filter={this.state.filter}
+                sortType={this.state.sortType}
+                addToCart={this.addToCart}
+                removeFromCart={this.removeFromCart}
+              />
+            </Grid>
+            <Grid item xs={3}>
+              <Cart
+                cart={this.state.cart}
+                totalFee={this.state.totalFee}
+                removeFromCart={this.removeFromCart}
+              />
+            </Grid>
+          </Grid>
         </div>
       </div>
     );

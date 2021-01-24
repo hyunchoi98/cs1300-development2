@@ -77,7 +77,7 @@ class FilteredList extends Component {
     const listItems = filtered.map(this.createList);
 
     return <List style={{
-      display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: 5, width: "75%"
+      display: 'flex', flexDirection: 'row', flexWrap: 'wrap', padding: 5
     }
     }> {listItems}</List >;
   }
