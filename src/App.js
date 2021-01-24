@@ -20,7 +20,7 @@ class App extends Component {
     super();
     this.state = {
       cart: [],
-      filter: {
+      filter: { // store the state of each filter all in one variable
         type: CardTypes.ALL_TYPES,
         issuer: Issuers.ALL_ISSUERS,
         fee: AnnualFees.ALL_FEES,
@@ -28,9 +28,9 @@ class App extends Component {
       sortType: SortTypes.NAME,
       totalFee: 0,
     };
-    // const [dialogIsOpen, setDialogIsOpen] = React.useState(false);
   }
 
+  // Change type filter
   changeType = event => {
     let newType = event.target.value;
     let newFilter = this.state.filter;
@@ -38,9 +38,9 @@ class App extends Component {
     this.setState({
       filter: newFilter,
     });
-
   };
 
+  // Change issuer filter
   changeIssuer = event => {
     let newIssuer = event.target.value;
     let newFilter = this.state.filter;
@@ -50,6 +50,7 @@ class App extends Component {
     });
   };
 
+  // Change fee filter
   changeFee = event => {
     let newFee = event.target.value;
     let newFilter = this.state.filter;
@@ -59,6 +60,7 @@ class App extends Component {
     });
   };
 
+  // Change the type of sort used
   changeSortType = event => {
     let newSortType = event.target.value;
     this.setState({
@@ -80,7 +82,6 @@ class App extends Component {
         cart: cart,
       });
     }
-    console.log(this.state.cart)
   };
 
   removeFromCart = card => {

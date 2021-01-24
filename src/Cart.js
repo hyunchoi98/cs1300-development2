@@ -15,9 +15,9 @@ class Cart extends Component {
   }
 
   render() {
-    console.log(this.props.cart);
     let listOfCards = this.props.cart.map(this.cartList);
 
+    // Add cart total to the beginning of the list
     listOfCards.unshift(
       <ListItem style={{ textAlign: "left" }}>
         <ListItemText variant="h" component="h2">

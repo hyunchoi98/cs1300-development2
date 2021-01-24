@@ -15,7 +15,6 @@ class CartItem extends Component {
 
     return (
       <Card style={{ margin: 5, width: "100%", display: "flex", flexDirection: "column", justifyContent: "space-between", }}>
-        {/* <CardActionArea> */}
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">{creditcard.name}</Typography>
           <Typography variant="body2" color="textSecondary" component="p">{creditcard.type}</Typography>
@@ -23,7 +22,6 @@ class CartItem extends Component {
           <Typography variant="body2" color="textSecondary" component="p">Annual Fee: ${creditcard.fee}</Typography>
         </CardContent>
         <Button style={{ margin: 5, backgroundColor: "#f6685e" }} onClick={this.removeCard}>Remove</Button>
-        {/* </CardActionArea> */}
       </Card>
 
     );

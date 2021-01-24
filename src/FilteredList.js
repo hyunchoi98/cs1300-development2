@@ -16,6 +16,7 @@ class FilteredList extends Component {
 
 
   filterHandler(data, filter) {
+    // Filter the list of cards one by one by each attribute 
     let filtered = data;
     if (filter['type'] !== CardTypes.ALL_TYPES) {
       filtered = filtered.filter(card => card['type'] === filter['type']);
@@ -38,6 +39,7 @@ class FilteredList extends Component {
   }
 
   sortHandler(data, sortType) {
+    // Handle each sort type individually
     if (sortType === SortTypes.NAME) {
       data.sort((a, b) => {
         if (a.name > b.name) {
@@ -53,16 +55,6 @@ class FilteredList extends Component {
         if (a.fee > b.fee) {
           return 1;
         } else if (a.fee < b.fee) {
-          return -1;
-        } else {
-          return 0;
-        }
-      });
-    } else {
-      data.sort((a, b) => {
-        if (a.bonus > b.bonus) {
-          return 1;
-        } else if (a.bonus < b.bonus) {
           return -1;
         } else {
           return 0;
